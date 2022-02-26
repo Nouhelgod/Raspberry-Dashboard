@@ -18,10 +18,10 @@ def wrapped_main():
 # Initialzation
 def init():
     global LANG, DATE_FORMAT, COLOR_FG, COLOR_BG    
-    LANG = jsr.read('settings.json', 'language')
-    DATE_FORMAT = jsr.read('settings.json', 'date_format')
-    COLOR_FG = cols.get_color(jsr.read('settings.json', 'color_foreground'))
-    COLOR_BG = cols.get_color(jsr.read('settings.json', 'color_background'))
+    LANG = jsr.read('app_settings.json', 'timegui.loc.language')
+    DATE_FORMAT = jsr.read('app_settings.json', 'timegui.loc.date_format')
+    COLOR_FG = cols.get_color(jsr.read('app_settings.json', 'timegui.color.foreground'))
+    COLOR_BG = cols.get_color(jsr.read('app_settings.json', 'timegui.color.background'))
 
 
 # Main loop
