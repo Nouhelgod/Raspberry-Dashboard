@@ -7,7 +7,7 @@ from lib.lib_calendar import calendar
 from lib import lib_drawing as drw
 
 
-def draw(stdscr, date_format, lang, cp):
+def draw(stdscr, cp, date_format, lang):
     h, w = stdscr.getmaxyx()
     
     month = datetime.datetime.now().strftime('%m')

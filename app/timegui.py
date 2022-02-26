@@ -40,7 +40,7 @@ def main(stdscr):
         drw.fill_bg(stdscr, cp, h, w)       
     
         time_last, semicolon_state = mod_clock.draw(stdscr, cp, semicolon_state, time_last)
-        mod_date.draw(stdscr, DATE_FORMAT, LANG, cp)
+        mod_date.draw(stdscr, cp, DATE_FORMAT, LANG)
 
         curses.curs_set(0)
         stdscr.refresh()
