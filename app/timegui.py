@@ -9,20 +9,25 @@ from lib import lib_drawing as drw
 from mod import mod_clock
 from mod import mod_date
 
-# Initialzation    
-LANG = jsr.read('settings.json', 'language')
-DATE_FORMAT = jsr.read('settings.json', 'date_format')
-COLOR_FG = cols.get_color(jsr.read('settings.json', 'color_foreground'))
-COLOR_BG = cols.get_color(jsr.read('settings.json', 'color_background'))
 
 def wrapped_main():
+    """Curses wrapper"""
     curses.wrapper(main)
+
+
+# Initialzation
+def init():
+    global LANG, DATE_FORMAT, COLOR_FG, COLOR_BG    
+    LANG = jsr.read('settings.json', 'language')
+    DATE_FORMAT = jsr.read('settings.json', 'date_format')
+    COLOR_FG = cols.get_color(jsr.read('settings.json', 'color_foreground'))
+    COLOR_BG = cols.get_color(jsr.read('settings.json', 'color_background'))
 
 
 # Main loop
 def main(stdscr):
-
-    # Initialization
+    init()
+    
     curses.start_color()
     curses.init_pair(1, COLOR_BG, COLOR_FG)
     curses.init_pair(2, COLOR_FG, COLOR_BG)
@@ -44,7 +49,6 @@ def main(stdscr):
 
         curses.curs_set(0)
         stdscr.refresh()
-
 
 
 if __name__ == '__main__':
