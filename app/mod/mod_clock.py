@@ -13,11 +13,11 @@ def draw_symbol(stdscr, pos, smb, height, width, color):
     """Draw large symbol on the screen.
 
     Args:
+        stdscr (stdscr): curses screen
         pos (int): 1..5 -- position
         smb (list): list formatted symbol
         height (int): screen height
         width (int): screen width
-        stdscr (stdscr): curses screen
         color (curses.color_pair): color pair in curses format
     """
     stdscr.attron(color)
