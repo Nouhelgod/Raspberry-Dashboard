@@ -3,7 +3,7 @@ import curses
 
 # Local modules
 from lib import lib_curses_colors as cols
-from lib import lib_json_reader as jsr
+from lib import lib_json_wrapper as jsr
 from lib import lib_drawing as drw
 
 from mod import mod_clock

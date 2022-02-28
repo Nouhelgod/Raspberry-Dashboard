@@ -1,10 +1,10 @@
 {
-    "app.version" : "v9.0.3",
+    "app.version" : "v0.9.3",
 
     "timegui.loc.language" : "ru_RU",
     "timegui.loc.date_format" : "EU", 
     "timegui.color.foreground" : "black",
     "timegui.color.background" : "white",
 
-    "telebot.loc.language" : "en_US"
+    "telebot.loc.language" : "ru_RU"
 }

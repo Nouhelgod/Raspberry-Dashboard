@@ -3,13 +3,13 @@ import json
 import os
 
 # Local modules
-from lib import lib_json_reader as jsr
+from lib import lib_json_wrapper as jsr
 
-def get_month(month, lang = 'en_US'):
+def get_month(month, lang = 'en_GB'):
     """
     Args:
         month (str): '01' -- Number of month with 0 if not oct. nov. dec. 
-        lang (str, optional): -- Language. Defaults to 'en_US'.
+        lang (str, optional): -- Language. Defaults to 'en_GB'.
 
     Returns:
         str: name of month.
@@ -20,11 +20,11 @@ def get_month(month, lang = 'en_US'):
     return months[month]
     
 
-def get_weekday(weekday, lang = 'en_US'):
+def get_weekday(weekday, lang = 'en_GB'):
     """
     Args:
         weekday (str): '1' -- Number of weekday .
-        lang (str, optional): -- Language. Defaults to 'en_US'.
+        lang (str, optional): -- Language. Defaults to 'en_GB'.
 
     Returns:
         str: name of weekday.
