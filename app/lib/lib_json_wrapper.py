@@ -9,7 +9,7 @@ def read(filepath, key, encoding='UTF-8'):
         encoding (str, optional): json file encoding. Defaults to 'UTF-8'.
 
     Returns:
-        str: parameter of key.
+        any: parameter of key.
     """
     with open(filepath, encoding=encoding) as jsonobj:
         parameter = json.load(jsonobj)
@@ -31,4 +31,4 @@ def write(filepath, key, param, encoding='UTF-8'):
     data[key] = param
     
     with open(filepath, 'w', encoding=encoding) as jsonobj:
-        json.dump(data, jsonobj)
+        json.dump(data, jsonobj, indent=4)

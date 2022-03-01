@@ -1,0 +1,24 @@
+{
+    "tag.greetings": "С возвращением в Raspberry-Dashboard! ",
+    "tag.confirm_stop": "Эта команда отключает только компонент телеграм бота, вы уверены что хотите продолжить?",
+    "tag.select_language": "Please, select language:",
+    "tag.stop": "Завершение работы",
+    "tag.about": "Raspberry-Dashboard позволяет превратить Вашу Raspberry Pi в незаменимого помощника.",
+    "tag.greetings.language_select": "\n<b>Language: </b> /select_language",
+    
+    "tag.config.bot.slselect": "Выбор языка при старте",
+    "tag.config.bot.language": "Telebot language",
+    "tag.config.bot.lselect": "Выберите язык",
+
+    "button.confirm_stop.positive": "✅",
+    "button.confirm_stop.negative": "⛔",
+    "button.select_language.ru_RU": "🇷🇺 Русский",
+    "button.select_language.en_GB": "🇬🇧 English",
+    "button.start_message.settings_bot": "Конфигурация бота",
+    "button.start_message.settings_rpi": "Конфигурация RPi",
+    "button.start_message.about": "❓ Подробнее",
+    "button.back": "◀",
+    "button.settings.true": "🟢",
+    "button.settings.false": "⚫",
+    "button.start": "🏠"
+}

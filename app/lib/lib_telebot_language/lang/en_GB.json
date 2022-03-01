@@ -1,0 +1,24 @@
+{
+    "tag.greetings": "Welcome back to Raspberry-Dashboard! ",
+    "tag.confirm_stop": "Are you sure want to stop telegram bot? However, other components will still be running.",
+    "tag.select_language": "Please, select language:",
+    "tag.stop": "Shutting down",
+    "tag.about": "Raspberry-Dashboard allows You to make powerful helper from Raspberry Pi.",
+    "tag.greetings.language_select": "\n<b>Language: </b> /select_language",
+
+    "tag.config.bot.slselect": "Start message language select",
+    "tag.config.bot.language": "Telebot language",
+    "tag.config.bot.lselect": "Select language",
+
+    "button.confirm_stop.positive": "✅",
+    "button.confirm_stop.negative": "⛔",
+    "button.select_language.ru_RU": "🇷🇺 Русский",
+    "button.select_language.en_GB": "🇬🇧 English",
+    "button.start_message.settings_bot": "Bot configuration",
+    "button.start_message.settings_rpi": "RPi configuration",
+    "button.start_message.about": "❓ About dashboard",
+    "button.back": "◀",
+    "button.settings.true": "🟢",
+    "button.settings.false": "⚫",
+    "button.start": "🏠"
+}

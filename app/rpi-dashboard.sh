@@ -1,0 +1,1 @@
+python3 telegram_control_panel.py & python3 timegui.py
