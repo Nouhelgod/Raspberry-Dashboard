@@ -10,6 +10,8 @@
     "tag.config.bot.language": "Telebot language",
     "tag.config.bot.lselect": "Выберите язык",
 
+    "tag.config.rpi.main": "Выберите тип конфигурации:",
+
     "button.confirm_stop.positive": "✅",
     "button.confirm_stop.negative": "⛔",
     "button.select_language.ru_RU": "🇷🇺 Русский",
@@ -20,5 +22,9 @@
     "button.back": "◀",
     "button.settings.true": "🟢",
     "button.settings.false": "⚫",
-    "button.start": "🏠"
+    "button.start": "🏠",
+
+    "button.config_rpi.components" : "❗ Список компонентов",
+    "button.config_rpi.components_autorun" : "Автозапуск компонентов",
+    "button.config_rpi.components_running" : "Запущенные компоненты"
 }

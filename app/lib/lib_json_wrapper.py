@@ -16,6 +16,7 @@ def read(filepath, key, encoding='UTF-8'):
         
         return parameter[key]
     
+    
 def write(filepath, key, param, encoding='UTF-8'):
     """Update json parameter inside a file
 
@@ -32,3 +33,35 @@ def write(filepath, key, param, encoding='UTF-8'):
     
     with open(filepath, 'w', encoding=encoding) as jsonobj:
         json.dump(data, jsonobj, indent=4)
+        
+
+def append(filepath, key, param, encoding='UTF-8'):
+    
+    with open(filepath, 'r', encoding=encoding) as jsonobj:
+        data = json.load(jsonobj)
+        
+    data[key].append(param)
+    
+    with open(filepath, 'w', encoding=encoding) as jsonobj:
+        json.dump(data, jsonobj, indent=4)
+        
+
+def remove(filepath, key, param, encoding='UTF-8'):
+    with open(filepath, 'r', encoding=encoding) as jsonobj:
+        data = json.load(jsonobj)
+        
+    data[key].remove(param)
+    
+    with open(filepath, 'w', encoding=encoding) as jsonobj:
+        json.dump(data, jsonobj, indent=4)
+        
+        
+def check(filepath, key, param, encoding='UTF-8'):
+    with open(filepath, 'r', encoding=encoding) as jsonobj:
+        data = json.load(jsonobj)
+        
+    if param in data[key]:
+        return True
+    
+    else:
+        return False

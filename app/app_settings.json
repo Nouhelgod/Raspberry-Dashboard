@@ -1,15 +1,29 @@
 {
-    "app.version" : "v0.9.5",
+    "app.version": "v0.10.1",
     "app.languages": [
         "ru_RU",
         "en_GB"
     ],
 
-    "timegui.loc.language" : "ru_RU",
-    "timegui.loc.date_format" : "EU", 
-    "timegui.color.foreground" : "black",
-    "timegui.color.background" : "white",
+    "app.components": [
+        "timegui.py",
+        "telegram_control_panel.py"
+    ],
 
-    "telebot.loc.language" : "ru_RU",
+    "app.components.autorun": [
+        "telegram_control_panel.py",
+        "timegui.py"
+    ],
+
+    "app.components.running": [
+
+    ],
+
+    "timegui.loc.language": "ru_RU",
+    "timegui.loc.date_format": "EU", 
+    "timegui.color.foreground": "black",
+    "timegui.color.background": "white",
+
+    "telebot.loc.language": "ru_RU",
     "telebot.config.slselect": "true"
 }

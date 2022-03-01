@@ -68,7 +68,7 @@ def about(lang):
     return markup
 
 
-def generic_list(lang, options_list, callback_key, start=False):
+def generic_list(lang, options_list, callback_key, start=True):
     markup = telebot.types.InlineKeyboardMarkup()
     
     for num in range(len(options_list)):
@@ -83,4 +83,42 @@ def generic_list(lang, options_list, callback_key, start=False):
         callback_data=f'start!'
     ))
         
+    return markup
+
+
+def rpi_config(lang, start=True):
+    markup = telebot.types.InlineKeyboardMarkup()
+    
+    markup.add(telebot.types.InlineKeyboardButton(
+               text = locale.get_line(lang, 'button.config_rpi.components'),
+               callback_data='conf_rpi.components!'
+               ))
+    
+    markup.add(telebot.types.InlineKeyboardButton(
+               text = locale.get_line(lang, 'button.config_rpi.components_autorun'),
+               callback_data='conf_rpi.components_autorun'
+               ))
+    
+    markup.add(telebot.types.InlineKeyboardButton(
+               text = locale.get_line(lang, 'button.config_rpi.components_running'),
+               callback_data='conf_rpi.components_running'
+               ))
+    
+    if start:
+        markup.add(telebot.types.InlineKeyboardButton(
+        text = locale.get_line(lang, "button.start"),
+        callback_data=f'start!'
+    ))
+    
+    return markup
+
+
+def start(lang):
+    markup = telebot.types.InlineKeyboardMarkup()
+    
+    markup.add(telebot.types.InlineKeyboardButton(
+        text = locale.get_line(lang, "button.start"),
+        callback_data=f'start!'
+    ))
+    
     return markup
