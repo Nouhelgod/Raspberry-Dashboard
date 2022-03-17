@@ -23,8 +23,12 @@
     "button.settings.true": "🟢",
     "button.settings.false": "⚫",
     "button.start": "🏠",
+    "button.stop": "🛑 Shutdown bot",
 
-    "button.config_rpi.components" : "❗ List of components",
+    "button.config_rpi.components" : "List of components",
     "button.config_rpi.components_autorun" : "Autorun components",
-    "button.config_rpi.components_running" : "Running components"
+    "button.config_rpi.components_running" : "Active components",
+
+    "component.timegui": "Clock",
+    "component.tele_bot": "Telegram dashboard"
 }

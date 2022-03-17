@@ -68,20 +68,27 @@ def about(lang):
     return markup
 
 
-def generic_list(lang, options_list, callback_key, start=True):
+def generic_list(lang, options_list, callback_key, **kwargs):
     markup = telebot.types.InlineKeyboardMarkup()
     
     for num in range(len(options_list)):
         markup.add(telebot.types.InlineKeyboardButton(
-        text = str(num + 1),
-        callback_data=f'{callback_key}:{options_list[num][0]}:{options_list[num][1]}'
-    ))
-        
-    if start:
-        markup.add(telebot.types.InlineKeyboardButton(
-        text = locale.get_line(lang, "button.start"),
-        callback_data=f'start!'
-    ))
+            text = str(num + 1),
+            callback_data=f'{callback_key}:{options_list[num][0]}:{options_list[num][1]}'
+        ))
+    
+    for key, value in kwargs.items():           
+        if key == 'stop' and value == True:
+            markup.add(telebot.types.InlineKeyboardButton(
+                text = locale.get_line(lang, "button.stop"),
+                callback_data=f'stop!'
+            ))
+            
+        if key == 'start' and value == True:
+            markup.add(telebot.types.InlineKeyboardButton(
+                text = locale.get_line(lang, "button.start"),
+                callback_data=f'start!'
+            ))
         
     return markup
 

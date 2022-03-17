@@ -1,5 +1,5 @@
 {
-    "app.version": "v0.10.1",
+    "app.version": "v0.10.2",
     "app.languages": [
         "ru_RU",
         "en_GB"
@@ -7,13 +7,9 @@
 
     "app.components": [
         "timegui.py",
-        "telegram_control_panel.py"
+        "tele_bot.py"
     ],
 
-    "app.components.autorun": [
-        "telegram_control_panel.py",
-        "timegui.py"
-    ],
 
     "app.components.running": [
 
@@ -23,7 +19,9 @@
     "timegui.loc.date_format": "EU", 
     "timegui.color.foreground": "black",
     "timegui.color.background": "white",
+    "timegui.autorun" : "true",
 
-    "telebot.loc.language": "ru_RU",
-    "telebot.config.slselect": "true"
+    "tele_bot.loc.language": "ru_RU",
+    "tele_bot.config.slselect": "true",
+    "tele_bot.autorun": "true"
 }

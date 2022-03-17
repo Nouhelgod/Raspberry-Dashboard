@@ -23,8 +23,12 @@
     "button.settings.true": "🟢",
     "button.settings.false": "⚫",
     "button.start": "🏠",
+    "button.stop": "🛑 Завершить работу бота",
 
-    "button.config_rpi.components" : "❗ Список компонентов",
+    "button.config_rpi.components" : "Список компонентов",
     "button.config_rpi.components_autorun" : "Автозапуск компонентов",
-    "button.config_rpi.components_running" : "Запущенные компоненты"
+    "button.config_rpi.components_running" : "Активные компоненты",
+
+    "component.timegui": "Часы",
+    "component.tele_bot": "Панель управления Telegram"
 }

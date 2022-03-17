@@ -19,7 +19,7 @@ def add_option(LANG, options_list, key, value, type='list'):
         button_tag = get_button_tag_bool(LANG, 'app_settings.json', value)
         
     if type == 'language':
-        button_tag = get_button_tag_language(LANG, 'app_settings.json', 'telebot.loc.language')
+        button_tag = get_button_tag_language(LANG, 'app_settings.json', 'tele_bot.loc.language')
         
     options_list.append([key, value, locale.get_line(LANG, key), button_tag])
     
