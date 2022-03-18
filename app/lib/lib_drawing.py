@@ -2,11 +2,11 @@
 import curses
 
 
-def get_center(width, line):
+def get_center(width: int, line: str):
     """Get position of text line centered in screen.
 
     Args:
-        w (int): screen width
+        width (int): screen width
         line (str): line of text
 
     Returns:
@@ -14,7 +14,7 @@ def get_center(width, line):
     """
     return int((width // 2) - (len(line) // 2) - len(line) % 2)
 
-def invert_cp(cp):
+def invert_cp(cp: int):
     """Switch two color pairs
 
     Args:
@@ -29,14 +29,14 @@ def invert_cp(cp):
         return 1
     
 
-def fill_bg(stdscr, cp, height, width):
+def fill_bg(stdscr: stdscr, cp: int, height: int, width: int):
     """Fill background with COLOR_BG
 
     Args:
         stdscr (stdscr): curses screen
         cp (int): color pair in curses format
-        height (_type_): screen height
-        width (_type_): screen width
+        height (int): screen height
+        width (int): screen width
     """
     for i in range(height):
             for j in range(width - 1):

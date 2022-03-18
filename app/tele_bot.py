@@ -40,7 +40,7 @@ def stop(bot):
 def main():
     try:
         bot = telebot.TeleBot(API_KEY, parse_mode='HTML')
-        
+                
         # Message handlers
         @bot.message_handler(commands=['start'])
         def message_start(message):
@@ -91,7 +91,7 @@ def main():
                 
             if 'set_language' in callback:
                 # Set language
-                # (OLD METHOD)                    
+                # FIXME: (OLD METHOD)                    
                 jsr.write('app_settings.json', 'tele_bot.loc.language', callback.split('.')[1])
                 init()
                 delete_message(call, bot)
@@ -106,7 +106,7 @@ def main():
                 options_list = []
                 
                 # @ Bot configuration
-                # !Select language
+                # FIXME: !Select language
                 key = 'tag.config.bot.language'
                 value = 'tele_bot.loc.language'
                 options_list = sw.add_option(LANG, options_list, key, value, 'language')
@@ -177,6 +177,7 @@ def main():
                     
             
             if 'conf_rpi' in callback:
+                
                 # @ RPi configuration
                 # List of components
                 if 'components!' in callback:

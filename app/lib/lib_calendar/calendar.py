@@ -5,7 +5,8 @@ import os
 # Local modules
 from lib import lib_json_wrapper as jsr
 
-def get_month(month, lang = 'en_GB'):
+
+def get_month(month: str, lang: str = 'en_GB'):
     """
     Args:
         month (str): '01' -- Number of month with 0 if not oct. nov. dec. 
@@ -20,7 +21,7 @@ def get_month(month, lang = 'en_GB'):
     return months[month]
     
 
-def get_weekday(weekday, lang = 'en_GB'):
+def get_weekday(weekday: str, lang: str = 'en_GB'):
     """
     Args:
         weekday (str): '1' -- Number of weekday .

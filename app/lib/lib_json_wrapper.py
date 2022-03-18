@@ -1,6 +1,6 @@
 import json 
 
-def read(filepath, key, encoding='UTF-8'):
+def read(filepath: str, key: str, encoding: str='UTF-8'):
     """Read parameter of key from json file.
 
     Args:
@@ -17,8 +17,8 @@ def read(filepath, key, encoding='UTF-8'):
         return parameter[key]
     
     
-def write(filepath, key, param, encoding='UTF-8'):
-    """Update json parameter inside a file
+def write(filepath: str, key: str, param: str, encoding: str='UTF-8'):
+    """Update json parameter inside a file.
 
     Args:
         filepath (str): path to json file
@@ -35,8 +35,16 @@ def write(filepath, key, param, encoding='UTF-8'):
         json.dump(data, jsonobj, indent=4)
         
 
-def append(filepath, key, param, encoding='UTF-8'):
-    
+def append(filepath: str, key: str, param: any, encoding: str='UTF-8'):
+    """Append json file with object.
+
+    Args:
+        filepath (str): path to json file
+        key (str): key
+        param (any): parameter
+        encoding (str, optional): json file encoding. Defaults to 'UTF-8'.
+    """
+        
     with open(filepath, 'r', encoding=encoding) as jsonobj:
         data = json.load(jsonobj)
         
@@ -46,7 +54,16 @@ def append(filepath, key, param, encoding='UTF-8'):
         json.dump(data, jsonobj, indent=4)
         
 
-def remove(filepath, key, param, encoding='UTF-8'):
+def remove(filepath: str, key: str, param: any, encoding: str='UTF-8'):
+    """Remove parameter from json file.
+
+    Args:
+        filepath (str): path to json file
+        key (str): key
+        param (any): parameter
+        encoding (str, optional): json file encoding. Defaults to 'UTF-8'.
+    """
+    
     with open(filepath, 'r', encoding=encoding) as jsonobj:
         data = json.load(jsonobj)
         
@@ -56,7 +73,19 @@ def remove(filepath, key, param, encoding='UTF-8'):
         json.dump(data, jsonobj, indent=4)
         
         
-def check(filepath, key, param, encoding='UTF-8'):
+def check(filepath: str, key: str, param: any, encoding='UTF-8'):
+    """Check if json file have a key:parameter object.
+
+    Args:
+        filepath (str): path to json file
+        key (str): key
+        param (any): parameter
+        encoding (str, optional): json file encoding. Defaults to 'UTF-8'.
+
+    Returns:
+        bool: True if exists, else False.
+    """
+    
     with open(filepath, 'r', encoding=encoding) as jsonobj:
         data = json.load(jsonobj)
         

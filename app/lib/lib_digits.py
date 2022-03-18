@@ -1,4 +1,6 @@
-def get_digit(smb):
+#FIXME: Bruh.
+
+def get_digit(smb: smb):
     """Get large digit.
 
     Args:
@@ -213,6 +215,8 @@ def D9():
 
 
 if __name__ == '__main__':
+    """Just take a look"""
+    
     help(D0)
     help(D1)
     help(D2)

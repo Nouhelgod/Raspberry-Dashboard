@@ -6,7 +6,16 @@ from lib import lib_json_wrapper as jsr
 from lib.lib_telebot_language import language_controller as locale
 
 
-def generic_yn(lang, callback_key):
+def generic_yn(lang: str, callback_key: str):
+    """Generic yes / no.
+
+    Args:
+        lang (str): language
+        callback_key (str): special keyword to parse callback
+
+    Returns:
+        telebot.types.InlineKeyboardMarkup: [yes][no].
+    """
     markup = telebot.types.InlineKeyboardMarkup()
     
     markup.add(telebot.types.InlineKeyboardButton(
@@ -22,7 +31,16 @@ def generic_yn(lang, callback_key):
     return markup
 
 
-def select_language(lang, settings_file):
+def select_language(lang: str, settings_file: str):
+    """Generic language list
+
+    Args:
+        lang (str): Language
+        settings_file (str): path to json file with 'app.languages' object
+
+    Returns:
+        telebot.types.InlineKeyboardMarkup: [English][Russian][And][So][On]
+    """
     markup = telebot.types.InlineKeyboardMarkup()    
     language_list = jsr.read(settings_file, 'app.languages')
     
@@ -36,7 +54,15 @@ def select_language(lang, settings_file):
     return markup
 
 
-def start_message(lang):
+def start_message(lang: str):
+    """Keyboard of default (start) message
+
+    Args:
+        lang (str): Language
+
+    Returns:
+        telebot.types.InlineKeyboardMarkup: [Bot config][RPi config][About]
+    """
     markup = telebot.types.InlineKeyboardMarkup()
     
     markup.add(telebot.types.InlineKeyboardButton(
@@ -57,7 +83,16 @@ def start_message(lang):
     return markup
 
 
-def about(lang):
+# FIXME: RENAME. Might be useful in other cases.
+def about(lang: str):
+    """Keyboard of about section.
+
+    Args:
+        lang (str): Language
+
+    Returns:
+        telebot.types.InlineKeyboardMarkup: [Back]
+    """
     markup = telebot.types.InlineKeyboardMarkup()
     
     markup.add(telebot.types.InlineKeyboardButton(
@@ -68,7 +103,18 @@ def about(lang):
     return markup
 
 
-def generic_list(lang, options_list, callback_key, **kwargs):
+def generic_list(lang: str, options_list: list, callback_key: str, **kwargs):
+    """Generic list keyboard. Optional keyword arguments: stop (bool), start (bool).
+
+    Args:
+        lang (str): Language
+        options_list (list): List of options. Using lib_telebot_settings_wrapper is highly recommended.
+        callback_key (str): special keyword to parse callback
+
+    Returns:
+        telebot.types.InlineKeyboardMarkup: [1][2]...[len(options_list)] [Stop]*[Start]*
+        *optional
+    """
     markup = telebot.types.InlineKeyboardMarkup()
     
     for num in range(len(options_list)):
@@ -93,7 +139,16 @@ def generic_list(lang, options_list, callback_key, **kwargs):
     return markup
 
 
-def rpi_config(lang, start=True):
+def rpi_config(lang: str, start: bool=True):
+    """RPi config keyboard.
+
+    Args:
+        lang (str): Language
+        start (bool, optional): Add [Start] if True. Defaults to True.
+
+    Returns:
+        telebot.types.InlineKeyboardMarkup: [Components list][Autorun config][Active components]
+    """
     markup = telebot.types.InlineKeyboardMarkup()
     
     markup.add(telebot.types.InlineKeyboardButton(
@@ -120,7 +175,15 @@ def rpi_config(lang, start=True):
     return markup
 
 
-def start(lang):
+def start(lang: str):
+    """Just start button.
+
+    Args:
+        lang (str): Language
+
+    Returns:
+        telebot.types.InlineKeyboardMarkup: [Start]
+    """
     markup = telebot.types.InlineKeyboardMarkup()
     
     markup.add(telebot.types.InlineKeyboardButton(

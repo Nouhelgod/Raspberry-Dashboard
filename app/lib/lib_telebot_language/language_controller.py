@@ -4,7 +4,8 @@ import os
 # Local modules
 from lib import lib_json_wrapper as jsr
 
-def get_line(lang, line, **kwargs):
+
+def get_line(lang: str, line: str):
     """Get text line for telebot
 
     Args:

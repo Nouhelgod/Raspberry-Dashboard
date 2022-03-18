@@ -1,4 +1,6 @@
-def get_symbol(smb):
+# FIXME: Bruh.
+
+def get_symbol(smb: str):
     """Get large special symbol.
 
     Args:
