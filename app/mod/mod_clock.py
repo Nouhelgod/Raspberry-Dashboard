@@ -6,7 +6,13 @@ import datetime
 from lib import lib_digits as digits
 from lib import lib_special_symbols as spec
 
+
 def get_time():
+    """Get current time formated HH:MM:SS
+
+    Returns:
+        str: time formated HH:MM:SS
+    """
     return datetime.datetime.now().strftime('%H:%M:%S')
 
 def draw_symbol(stdscr, pos, smb, height, width, color):
@@ -27,7 +33,19 @@ def draw_symbol(stdscr, pos, smb, height, width, color):
             if smb[i][j]:
                 stdscr.addstr((height // 2) - 3 + i, (((width // 5) * pos)-(width // 5 // 2) - 3 + j), ' ')
     
-def draw(stdscr, cp, semicolon_state, time_last):
+def draw(stdscr: stdscr, cp: int, semicolon_state: bool, time_last: str):
+    """Draw clock on display.
+
+    Args:
+        stdscr (stdscr): stdscr
+        cp (int): number of color pair
+        semicolon_state (bool): draw semicolon if True
+        time_last (str): last time (previous second)
+
+    Returns:
+        time (str): actual time
+        semicolon_state (bool): actual semicolon state
+    """
 
     time = get_time()
     time_H = time[0] + time[1]

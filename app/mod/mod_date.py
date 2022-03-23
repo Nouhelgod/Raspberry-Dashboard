@@ -7,7 +7,15 @@ from lib.lib_calendar import calendar
 from lib import lib_drawing as drw
 
 
-def draw(stdscr, cp, date_format, lang):
+def draw(stdscr: stdscr, cp: int, date_format: str, lang: str):
+    """Draw date on screen.
+
+    Args:
+        stdscr (stdscr): stdscr
+        cp (int): number of color pair
+        date_format (str): EU (DD month YYYY) / US (Month DD YYYY)
+        lang (str): Language
+    """
     h, w = stdscr.getmaxyx()
     
     month = datetime.datetime.now().strftime('%m')
