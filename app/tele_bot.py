@@ -76,7 +76,7 @@ def main():
             callback = call.data
             
             # Stop bot
-            # (OLD METHOD)
+            # FIXME: (OLD METHOD)
             if 'confirm_stop' in callback:
                 if 'positive' in callback:
                     response = locale.get_line(LANG, 'tag.stop')
@@ -106,7 +106,7 @@ def main():
                 options_list = []
                 
                 # @ Bot configuration
-                # FIXME: !Select language
+                # !Select language
                 key = 'tag.config.bot.language'
                 value = 'tele_bot.loc.language'
                 options_list = sw.add_option(LANG, options_list, key, value, 'language')
