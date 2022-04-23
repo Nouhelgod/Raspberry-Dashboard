@@ -34,7 +34,6 @@ def stop():
 
 
 # Main loop
-
 def main(stdscr):
     try:
         init()

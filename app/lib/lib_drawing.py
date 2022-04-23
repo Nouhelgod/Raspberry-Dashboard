@@ -29,7 +29,7 @@ def invert_cp(cp: int):
         return 1
     
 
-def fill_bg(stdscr: stdscr, cp: int, height: int, width: int):
+def fill_bg(stdscr, cp: int, height: int, width: int):
     """Fill background with COLOR_BG
 
     Args:

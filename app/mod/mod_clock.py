@@ -33,7 +33,7 @@ def draw_symbol(stdscr, pos, smb, height, width, color):
             if smb[i][j]:
                 stdscr.addstr((height // 2) - 3 + i, (((width // 5) * pos)-(width // 5 // 2) - 3 + j), ' ')
     
-def draw(stdscr: stdscr, cp: int, semicolon_state: bool, time_last: str):
+def draw(stdscr, cp: int, semicolon_state: bool, time_last: str):
     """Draw clock on display.
 
     Args:

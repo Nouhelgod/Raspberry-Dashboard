@@ -7,7 +7,7 @@ from lib.lib_calendar import calendar
 from lib import lib_drawing as drw
 
 
-def draw(stdscr: stdscr, cp: int, date_format: str, lang: str):
+def draw(stdscr, cp: int, date_format: str, lang: str):
     """Draw date on screen.
 
     Args:

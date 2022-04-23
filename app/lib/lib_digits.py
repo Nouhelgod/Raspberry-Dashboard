@@ -1,6 +1,6 @@
 #FIXME: Bruh.
 
-def get_digit(smb: smb):
+def get_digit(smb):
     """Get large digit.
 
     Args:
